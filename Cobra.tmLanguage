@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(as|from|assert|print|var|invariant|is)\b</string>
+			<string>\b(as|from|assert|print|var|invariant|is|throw|expect)\b</string>
 			<key>name</key>
 			<string>keyword.other.cobra</string>
 		</dict>
