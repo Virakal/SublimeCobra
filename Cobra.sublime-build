@@ -1,0 +1,4 @@
+{
+	"cmd": ["cobra", "-c", "$file"],
+	"selector": "source.cobra"
+}
