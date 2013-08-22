@@ -213,7 +213,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(is|has)\s+(shared|partial)\s*</string>
+			<string>\s*(is|has)\s+(abstract|internal|nonvirtual|private|protected|public|shared|vari|inout|out|override|partial|virtual)\s*</string>
 			<key>name</key>
 			<string>keyword.operator.enumeration.cobra</string>
 		</dict>
