@@ -232,7 +232,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(implements|inherits)\s+([a-zA-Z_][\w_]*)\s*</string>
+			<string>\s*(implements|inherits|where|must be)\s+([a-zA-Z_][\w_]*)\s*</string>
 			<key>name</key>
 			<string>keyword.operator.enumeration.cobra</string>
 		</dict>
