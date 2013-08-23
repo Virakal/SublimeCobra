@@ -66,7 +66,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(and|in|not|or)\b</string>
+			<string>\b(and|in|not|or|any|all)\b</string>
 			<key>name</key>
 			<string>keyword.operator.logical.cobra</string>
 		</dict>
