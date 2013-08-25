@@ -12,4 +12,21 @@ Based on BOOMER's [original work][wiki] from the Cobra Wiki.
 
 ## Installing ##
 
-Within Sublime Text, click `Preferences > Browse Packages...` and create a folder named Cobra. Clone this repo into the folder. Package Manager support will hopefully come soon.
+### Using Package Manager ###
+
+The easiest way to install is to use the excellent [Package Control][pc] extension.
+Once this is installed, simply select 'Package Control: Install Package' from the command pallette
+and search for 'Cobra'.
+
+### Manually ###
+
+Within Sublime Text, click `Preferences > Browse Packages...` and create a folder named Cobra.
+Clone this repo into the folder.
+
+[pc]: https://sublime.wbond.net/installation
+
+## Caveats ##
+I'm totally new to Cobra itself, as well as writing Sublime configs, so any contributions and 
+corrections are very welcome.
+
+I am currently testing much more in ST2 than 3, but hopefully things should be fine in both.
