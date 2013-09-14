@@ -113,7 +113,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(def|cue|get|set|test|ensure|body|require)\b</string>
+			<string>\b(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\b</string>
 			<key>name</key>
 			<string>storage.type.function.cobra</string>
 		</dict>
