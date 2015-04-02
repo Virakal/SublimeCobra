@@ -25,6 +25,10 @@ Clone this repo into the folder.
 
 [pc]: https://sublime.wbond.net/installation
 
+## Contributing ##
+
+This project is now using AAAPackageDev's YAML to Plist compiler, so any contributions would preferably be added to the `.YAML-tmLanguage` file and compiled down.
+
 ## Caveats ##
 I'm totally new to Cobra itself, as well as writing Sublime configs, so any contributions and 
 corrections are very welcome.
