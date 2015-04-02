@@ -30,7 +30,8 @@ Clone this repo into the folder.
 This project is now using AAAPackageDev's YAML to Plist compiler, so any contributions would preferably be added to the `.YAML-tmLanguage` file and compiled down.
 
 ## Caveats ##
+
 I'm totally new to Cobra itself, as well as writing Sublime configs, so any contributions and 
 corrections are very welcome.
 
-I am currently testing much more in ST2 than 3, but hopefully things should be fine in both.
+I am currently testing much more in ST3 than 2, but hopefully things should be fine in both.
