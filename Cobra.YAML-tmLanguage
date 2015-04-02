@@ -1,0 +1,117 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Cobra
+scopeName: source.cobra
+fileTypes: [cobra]
+uuid: 3d6d5246-6da9-446a-869b-40345b01114b
+
+patterns:
+- match: '(#).*$'
+  name: comment.line.cobra
+
+- match: \b(?i:(0x\h*)L?)
+  name: constant.numeric.hexadecimal.cobra
+- match: \b(?:(0[0-7]+)L?)
+  name: constant.numeric.octal.cobra
+- match: \b(?i:(\d+\.\d*(e[\-\+]?\d+)?))(?=[^a-zA-Z_])
+  name: constant.numeric.float.cobra
+- match: (?<=[^0-9a-zA-Z_])(?i:(\.\d+(e[\-\+]?\d+)?))
+  name: constant.numeric.float.cobra
+- match: \b(?i:(\d+e[\-\+]?\d+))
+  name: constant.numeric.float.cobra
+- match: \b(?i:([1-9]+[0-9]*|0)L)
+  name: constant.numeric.integer.long.decimal.cobra
+- match: \b([1-9]+[0-9]*|0)
+  name: constant.numeric.integer.decimal.cobra
+
+- match: \b(branch|on|else|catch|finally|for|if|try|while|break|continue|pass|raise|return|using|yield)\b
+  name: keyword.control.cobra
+- match: \b(and|in|not|or|any|all)\b
+  name: keyword.operator.logical.cobra
+- match: \b(as|from|assert|print|var|invariant|is|throw|expect|trace)\b
+  name: keyword.other.cobra
+
+- match: <\=|>\=|\=\=|<|>|<>
+  name: keyword.operator.comparison.cobra
+- match: \=|\+\=|-\=|\*\=|/\=|//\=|%\=|&\=|\|\=|\^\=|>>\=|<<\=|\*\*\=
+  name: keyword.operator.assignment.cobra
+- match: \+|\-|\*|\*\*|/|//|%|<<|>>|&|\||\^|~
+  name: keyword.operator.arithmetic.cobra
+
+- match: \s*(use|namespace)\s+([a-zA-Z0-9_.]+)$
+  captures:
+    '1': {name: keyword.other.namespacing.cobra}
+    '2': {name: constant.class.cobra}
+- match: \b(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\b
+  name: storage.type.function.cobra
+- match: \b(nil|bool|char|int|uint|float|decimal|number|dynamic|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b(\?)?
+  name: support.type.primitive.cobra
+  captures:
+    '2': {name: support.type.nillible-marker.cobra}
+- match: \b(String|List|Dictionary|Set|Stack|Queue|TextWriter|TextReader|StringBuilder)(?:\?)?\s*(<of\s*[a-zA-Z0-9_]+>)\b
+  name: support.class.cobra
+
+- include: '#strings'
+
+- begin: '^\s*(""")'
+  end: '"""\s*$'
+  name: comment.block.cobra
+- begin: '^\s*(/#)'
+  end: '#/\s*$'
+  name: comment.block.cobra
+
+- match: ^\s+(var)\s+(_[\w_]+)\s+(as)?(\s+[\w_<>\s?]+)
+  captures:
+    '1': {name: keyword.operator.declaration.cobra}
+    '2': {name: support.private-variable.cobra}
+    '3': {name: keyword.operator.specifier.cobra}
+    '4': {name: support.other.type.cobra}
+- match: \s*(?:enum|interface|struct|mixin)\s+([\w_]+)
+  name: keyword.operator.enumeration.cobra
+  captures:
+    '1': {name: entity.name.enumeration.cobras}
+- match: \s*(is|has)\s+(abstract|internal|nonvirtual|private|protected|public|shared|vari|inout|out|override|partial|virtual)\s*
+  name: keyword.operator.enumeration.cobra
+  captures:
+    '1': {name: operator.name.is.cobra}
+    '2': {name: constant.other.modifier.cobra}
+# TODO: Change the scopes on these?!
+- match: \s*(implements|inherits|where|must be)\s+([a-zA-Z_][\w_]*)\s*
+  name: keyword.operator.enumeration.cobra
+  captures:
+    '1': {name: operator.name.is.cobra}
+    '2': {name: constant.other.interface.cobra}
+- match: ^\s+(def|cue|get|pro|sig)\s+([a-zA-Z_]\w+)
+  name: meta.type.method.cobra
+  captures:
+    '1': {name: keyword.operator.method.cobra}
+    '2': {name: entity.name.type.cobra}
+- match: ^\s*(class)\s+([a-zA-Z_][\w_]*)\s*
+  captures:
+    '1': {name: keyword.operator.class-definition.cobra}
+    '2': {name: entity.name.user-defined-type.cobra}
+
+repository:
+  escaped-characters:
+    match: (\\x[0-9A-F]{2})|(\\[0-7]{3})|(\\\n)|(\\\\)|(\\\")|(\\')|(\\a)|(\\b)|(\\f)|(\\n)|(\\r)|(\\t)|(\\v)
+    name: constant.character.escape.cobra
+
+  strings:
+    patterns:
+    - begin: (?<!')r?'(?!')
+      end: "'"
+      name: string.quoted.single.cobra
+      patterns:
+      - include: '#escaped-characters'
+      - include: '#varsub'
+    - begin: (?<!")r?"(?!")
+      end: '"'
+      name: string.quoted.double.cobra
+      patterns:
+      - include: '#escaped-characters'
+      - include: '#varsub'
+
+  varsub:
+    match: (\[[\w.]+\])
+    name: support.other.variable-substitution.cobra
+...
