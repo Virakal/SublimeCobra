@@ -42,8 +42,6 @@ patterns:
   captures:
     '1': {name: keyword.other.namespacing.cobra}
     '2': {name: constant.class.cobra}
-- match: \b(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\b
-  name: storage.type.function.cobra
 - match: \b(nil|bool|char|int|uint|float|decimal|number|dynamic|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b(\?)?
   name: support.type.primitive.cobra
   captures:
@@ -81,14 +79,13 @@ patterns:
   captures:
     '1': {name: operator.name.is.cobra}
     '2': {name: constant.other.interface.cobra}
-- match: ^\s+(def|cue|get|pro|sig)\s+([a-zA-Z_]\w+)
-  name: meta.type.method.cobra
+- match: ^\s+(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\s+([a-zA-Z_]\w+)
   captures:
-    '1': {name: keyword.operator.method.cobra}
-    '2': {name: entity.name.type.cobra}
+    '1': {name: storage.type.function.cobra}
+    '2': {name: entity.name.function.cobra}
 - match: ^\s*(class)\s+([a-zA-Z_][\w_]*)\s*
   captures:
-    '1': {name: keyword.operator.class-definition.cobra}
+    '1': {name: storage.type.class.cobra}
     '2': {name: entity.name.user-defined-type.cobra}
 
 repository:

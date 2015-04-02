@@ -112,12 +112,6 @@
 			<string>\s*(use|namespace)\s+([a-zA-Z0-9_.]+)$</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>\b(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\b</string>
-			<key>name</key>
-			<string>storage.type.function.cobra</string>
-		</dict>
-		<dict>
 			<key>captures</key>
 			<dict>
 				<key>2</key>
@@ -242,18 +236,16 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.method.cobra</string>
+					<string>storage.type.function.cobra</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.type.cobra</string>
+					<string>entity.name.function.cobra</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(def|cue|get|pro|sig)\s+([a-zA-Z_]\w+)</string>
-			<key>name</key>
-			<string>meta.type.method.cobra</string>
+			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\s+([a-zA-Z_]\w+)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -261,7 +253,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.class-definition.cobra</string>
+					<string>storage.type.class.cobra</string>
 				</dict>
 				<key>2</key>
 				<dict>
