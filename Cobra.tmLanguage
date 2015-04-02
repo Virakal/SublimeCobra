@@ -147,7 +147,7 @@
 			<key>end</key>
 			<string>"""\s*$</string>
 			<key>name</key>
-			<string>comment.block.cobra</string>
+			<string>comment.documentation.cobra</string>
 		</dict>
 		<dict>
 			<key>begin</key>

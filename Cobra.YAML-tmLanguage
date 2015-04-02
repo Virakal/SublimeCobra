@@ -55,7 +55,7 @@ patterns:
 
 - begin: '^\s*(""")'
   end: '"""\s*$'
-  name: comment.block.cobra
+  name: comment.documentation.cobra
 - begin: '^\s*(/#)'
   end: '#/\s*$'
   name: comment.block.cobra
