@@ -226,7 +226,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant)\s+([a-zA-Z_]\w+)</string>
+			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant|pro)\s+([a-zA-Z_]\w+)</string>
 		</dict>
 		<dict>
 			<key>captures</key>

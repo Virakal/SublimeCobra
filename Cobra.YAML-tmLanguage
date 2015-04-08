@@ -74,7 +74,7 @@ patterns:
   captures:
     '1': {name: operator.name.is.cobra}
     '2': {name: constant.other.interface.cobra}
-- match: ^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant)\s+([a-zA-Z_]\w+)
+- match: ^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant|pro)\s+([a-zA-Z_]\w+)
   captures:
     '1': {name: storage.type.function.cobra}
     '2': {name: entity.name.function.cobra}
