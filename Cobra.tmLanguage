@@ -247,7 +247,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(body|test|require|ensure)\s*$</string>
+			<string>^\s*(body|test|require|ensure|get|set)\s*$</string>
 		</dict>
 		<dict>
 			<key>begin</key>
