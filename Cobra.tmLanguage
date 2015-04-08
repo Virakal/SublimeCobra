@@ -218,7 +218,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant|pro)\s+([a-zA-Z_]\w+)</string>
+			<string>^\s+(def|cue|get|set|sig|pro)\s+([a-zA-Z_]\w+)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -236,6 +236,18 @@
 			</dict>
 			<key>match</key>
 			<string>^\s*(class|enum|interface|struct|mixin|extend)\s+([a-zA-Z_][\w_]*)\s*</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.method-body.cobra</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*(body|test|require|ensure)\s*$</string>
 		</dict>
 	</array>
 	<key>repository</key>
