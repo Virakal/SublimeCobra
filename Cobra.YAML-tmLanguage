@@ -64,10 +64,6 @@ patterns:
     '2': {name: support.private-variable.cobra}
     '3': {name: keyword.operator.specifier.cobra}
     '4': {name: support.other.type.cobra}
-- match: \s*(?:enum|interface|struct|mixin)\s+([\w_]+)
-  name: keyword.operator.enumeration.cobra
-  captures:
-    '1': {name: entity.name.enumeration.cobras}
 - match: \s*(is|has)\s+(abstract|internal|nonvirtual|private|protected|public|shared|vari|inout|out|override|partial|virtual)\s*
   name: keyword.operator.enumeration.cobra
   captures:
@@ -83,7 +79,7 @@ patterns:
   captures:
     '1': {name: storage.type.function.cobra}
     '2': {name: entity.name.function.cobra}
-- match: ^\s*(class)\s+([a-zA-Z_][\w_]*)\s*
+- match: ^\s*(class|enum|interface|struct|mixin|extend)\s+([a-zA-Z_][\w_]*)\s*
   captures:
     '1': {name: storage.type.class.cobra}
     '2': {name: entity.name.user-defined-type.cobra}

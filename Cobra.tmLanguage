@@ -184,20 +184,6 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.enumeration.cobras</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\s*(?:enum|interface|struct|mixin)\s+([\w_]+)</string>
-			<key>name</key>
-			<string>keyword.operator.enumeration.cobra</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
 					<string>operator.name.is.cobra</string>
 				</dict>
 				<key>2</key>
@@ -262,7 +248,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*(class)\s+([a-zA-Z_][\w_]*)\s*</string>
+			<string>^\s*(class|enum|interface|struct|mixin|extend)\s+([a-zA-Z_][\w_]*)\s*</string>
 		</dict>
 	</array>
 	<key>repository</key>
