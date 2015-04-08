@@ -28,7 +28,7 @@ patterns:
   name: keyword.control.cobra
 - match: \b(and|in|not|or|any|all)\b
   name: keyword.operator.logical.cobra
-- match: \b(as|from|assert|print|invariant|is|throw|expect|trace)\b
+- match: \b(as|from|assert|print|invariant|is|throw|expect|trace|require)\b
   name: keyword.other.cobra
 
 - match: <\=|>\=|\=\=|<|>|<>
