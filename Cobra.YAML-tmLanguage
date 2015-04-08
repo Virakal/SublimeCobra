@@ -79,7 +79,7 @@ patterns:
   captures:
     '1': {name: storage.type.class.cobra}
     '2': {name: entity.name.type.class.cobra}
-- match: ^\s*(body|test|require|ensure|get|set)\s*$
+- match: ^\s*(body|test|require|ensure|get|set|shared)\s*$
   captures:
     '1': {name: storage.type.method-body.cobra}
 
