@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(as|from|assert|print|var|invariant|is|throw|expect|trace)\b</string>
+			<string>\b(as|from|assert|print|invariant|is|throw|expect|trace)\b</string>
 			<key>name</key>
 			<string>keyword.other.cobra</string>
 		</dict>
@@ -162,7 +162,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>support.private-variable.cobra</string>
+					<string>variable.parameter.function.cobra</string>
 				</dict>
 				<key>3</key>
 				<dict>
@@ -176,7 +176,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(var)\s+(_[\w_]+)\s+(as)?(\s+[\w_&lt;&gt;\s?]+)</string>
+			<string>^\s+(var|const)\s+(_[\w_]+)(?:\s+(as|from)?(\s+[\w_&lt;&gt;\s?]+)?)</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -231,7 +231,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\s+([a-zA-Z_]\w+)</string>
+			<string>^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant)\s+([a-zA-Z_]\w+)</string>
 		</dict>
 		<dict>
 			<key>captures</key>

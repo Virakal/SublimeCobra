@@ -28,7 +28,7 @@ patterns:
   name: keyword.control.cobra
 - match: \b(and|in|not|or|any|all)\b
   name: keyword.operator.logical.cobra
-- match: \b(as|from|assert|print|var|invariant|is|throw|expect|trace)\b
+- match: \b(as|from|assert|print|invariant|is|throw|expect|trace)\b
   name: keyword.other.cobra
 
 - match: <\=|>\=|\=\=|<|>|<>
@@ -58,10 +58,10 @@ patterns:
   end: '#/\s*$'
   name: comment.block.cobra
 
-- match: ^\s+(var)\s+(_[\w_]+)\s+(as)?(\s+[\w_<>\s?]+)
+- match: ^\s+(var|const)\s+(_[\w_]+)(?:\s+(as|from)?(\s+[\w_<>\s?]+)?)
   captures:
     '1': {name: keyword.operator.declaration.cobra}
-    '2': {name: support.private-variable.cobra}
+    '2': {name: variable.parameter.function.cobra}
     '3': {name: keyword.operator.specifier.cobra}
     '4': {name: support.other.type.cobra}
 - match: \s*(is|has)\s+(abstract|internal|nonvirtual|private|protected|public|shared|vari|inout|out|override|partial|virtual)\s*
@@ -75,7 +75,7 @@ patterns:
   captures:
     '1': {name: operator.name.is.cobra}
     '2': {name: constant.other.interface.cobra}
-- match: ^\s+(def|cue|get|set|test|ensure|body|require|shared|var|sig|invariant)\s+([a-zA-Z_]\w+)
+- match: ^\s+(def|cue|get|set|test|ensure|body|require|shared|sig|invariant)\s+([a-zA-Z_]\w+)
   captures:
     '1': {name: storage.type.function.cobra}
     '2': {name: entity.name.function.cobra}
