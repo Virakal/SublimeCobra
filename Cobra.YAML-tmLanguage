@@ -83,6 +83,19 @@ patterns:
   captures:
     '1': {name: storage.type.method-body.cobra}
 
+- begin: (?<!')(sharp)'(?!')
+  end: "'"
+  beginCaptures:
+    '1': {name: string.literal.sharp-literal}
+  patterns:
+  - include: source.cs
+- begin: (?<!")(sharp)"(?!")
+  end: '"'
+  beginCaptures:
+    '1': {name: string.literal.sharp-literal}
+  patterns:
+  - include: source.cs
+
 repository:
   escaped-characters:
     match: (\\x[0-9A-F]{2})|(\\[0-7]{3})|(\\\n)|(\\\\)|(\\\")|(\\')|(\\a)|(\\b)|(\\f)|(\\n)|(\\r)|(\\t)|(\\v)

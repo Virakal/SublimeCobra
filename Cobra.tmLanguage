@@ -249,6 +249,48 @@
 			<key>match</key>
 			<string>^\s*(body|test|require|ensure)\s*$</string>
 		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;!')(sharp)'(?!')</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.literal.sharp-literal</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>'</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.cs</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;!")(sharp)"(?!")</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.literal.sharp-literal</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>"</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.cs</string>
+				</dict>
+			</array>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
