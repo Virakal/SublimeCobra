@@ -137,14 +137,6 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\s*(""")</string>
-			<key>end</key>
-			<string>"""\s*$</string>
-			<key>name</key>
-			<string>comment.documentation.cobra</string>
-		</dict>
-		<dict>
-			<key>begin</key>
 			<string>^\s*(/#)</string>
 			<key>end</key>
 			<string>#/\s*$</string>
@@ -285,6 +277,14 @@
 					<string>"</string>
 					<key>name</key>
 					<string>string.quoted.double.cobra</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(?&lt;!")r?"""(?!""")</string>
+					<key>end</key>
+					<string>"""</string>
+					<key>name</key>
+					<string>string.quoted.double.block.cobra</string>
 					<key>patterns</key>
 					<array>
 						<dict>

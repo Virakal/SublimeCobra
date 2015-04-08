@@ -51,9 +51,6 @@ patterns:
 
 - include: '#strings'
 
-- begin: '^\s*(""")'
-  end: '"""\s*$'
-  name: comment.documentation.cobra
 - begin: '^\s*(/#)'
   end: '#/\s*$'
   name: comment.block.cobra
@@ -99,6 +96,9 @@ repository:
     - begin: (?<!")r?"(?!")
       end: '"'
       name: string.quoted.double.cobra
+    - begin: (?<!")r?"""(?!""")
+      end: '"""'
+      name: string.quoted.double.block.cobra
       patterns:
       - include: '#escaped-characters'
       - include: '#varsub'
