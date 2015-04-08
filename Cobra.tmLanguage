@@ -162,21 +162,16 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.cobra</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
 					<string>keyword.operator.specifier.cobra</string>
 				</dict>
-				<key>4</key>
+				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>support.other.type.cobra</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s+(var|const)\s+(_[\w_]+)(?:\s+(as|from)?(\s+[\w_&lt;&gt;\s?]+)?)</string>
+			<string>^\s+(var|const)\s+(?:_[\w_]+)(?:\s+(as|from)?(\s+[\w_&lt;&gt;\s?]+)?)</string>
 		</dict>
 		<dict>
 			<key>captures</key>

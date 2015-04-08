@@ -58,12 +58,11 @@ patterns:
   end: '#/\s*$'
   name: comment.block.cobra
 
-- match: ^\s+(var|const)\s+(_[\w_]+)(?:\s+(as|from)?(\s+[\w_<>\s?]+)?)
+- match: ^\s+(var|const)\s+(?:_[\w_]+)(?:\s+(as|from)?(\s+[\w_<>\s?]+)?)
   captures:
     '1': {name: keyword.operator.declaration.cobra}
-    '2': {name: variable.parameter.function.cobra}
-    '3': {name: keyword.operator.specifier.cobra}
-    '4': {name: support.other.type.cobra}
+    '2': {name: keyword.operator.specifier.cobra}
+    '3': {name: support.other.type.cobra}
 - match: \s*(is|has)\s+(abstract|internal|nonvirtual|private|protected|public|shared|vari|inout|out|override|partial|virtual)\s*
   name: keyword.operator.enumeration.cobra
   captures:
