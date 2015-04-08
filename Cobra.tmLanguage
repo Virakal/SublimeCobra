@@ -239,7 +239,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.user-defined-type.cobra</string>
+					<string>entity.name.type.class.cobra</string>
 				</dict>
 			</dict>
 			<key>match</key>

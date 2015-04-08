@@ -81,7 +81,7 @@ patterns:
 - match: ^\s*(class|enum|interface|struct|mixin|extend)\s+([a-zA-Z_][\w_]*)\s*
   captures:
     '1': {name: storage.type.class.cobra}
-    '2': {name: entity.name.user-defined-type.cobra}
+    '2': {name: entity.name.type.class.cobra}
 
 repository:
   escaped-characters:
